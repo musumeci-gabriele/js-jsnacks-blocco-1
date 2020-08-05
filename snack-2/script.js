@@ -1,13 +1,26 @@
-// INSERISCI UN NUMERO
-var numOne = parseInt(prompt("Inserisci un numero :"));
+//  NOTA : INSERISCI DUE PAROLE E VERRANNO STAMPATE IN ORDINE DALLA PIU CORTA ALLA PIU' LUNGA
+alert ("INSERISCI DUE PAROLE E VERRANNO STAMPATE IN ORDINE DALLA PIU CORTA ALLA PIU' LUNGA");
 
-// SE IL NUMERO E' PARI VERRA'STAMPATO
-if (numOne % 2 ==0) {
-  document.getElementById('numero').innerHTML = numOne;
-  console.log(numOne);
+// INSERISCI UNA PAROLA
+var wordOne = prompt("Inserisci una parola :");
+console.log(wordOne);
+
+// INSERISCI LA SECONDA PAROLA
+var wordTwo = prompt("Inserisci la seconda parola :");
+console.log(wordTwo);
+
+// SE LA PRIMA PAROLA E' PIU' CORTA STAMPALA PER PRIMA
+if (parseInt(wordOne.lenght < wordTwo.lenght)) {
+  console.log (wordOne + wordTwo);
+  document.getElementById("parole").innerHTML = (wordOne + wordTwo);
 }
-// ALTRIMENTI AL NUMERO VERRA' SOMMATO UNO
-else {
-  console.log(numOne + 1);
-  document.getElementById('numero').innerHTML = (numOne + 1);
+// ALTRIMENTI STAMPA PRIMA LA SECONDA PAROLA
+else if (wordOne.lenght > wordTwo.lenght) {
+  console.log(wordTwo + wordOne);
+  document.getElementById("parole").innerHTML = (wordTwo + wordOne);
 }
+// lE DUE PAROLE SONO DI UGUALE LUNGHEZZA
+// else {
+//   console.log(wordOne + wordTwo);
+//   document.getElementById('parole').innerHTML = (wordOne  + " " + wordTwo + " Le due parole sono di egual lunghezza.");
+// }
